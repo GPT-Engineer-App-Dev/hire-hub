@@ -11,7 +11,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { CircleUser, Menu, Briefcase } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+const navItems = [
+  // existing nav items
+  {
+    title: "Post Job",
+    to: "/post-job",
+    icon: <Briefcase className="h-4 w-4" />,
+  },
+];
 
 const Layout = () => {
   return (
@@ -39,6 +46,7 @@ const DesktopNav = () => (
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
+        {item.icon}
         {item.title}
       </NavItem>
     ))}
@@ -64,6 +72,7 @@ const MobileNav = () => (
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
+            {item.icon}
             {item.title}
           </NavItem>
         ))}
