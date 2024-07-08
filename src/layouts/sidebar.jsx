@@ -114,13 +114,4 @@ const SidebarNavLink = ({ to, children }) => (
   </NavLink>
 );
 
-const navItems = [
-  // existing nav items
-  {
-    title: "Post Job",
-    to: "/post-job",
-    icon: <Briefcase className="h-4 w-4" />,
-  },
-];
-
 export default Layout;
